@@ -43,6 +43,9 @@ class PayWithPayStack {
     /// Extra data not consumed by Paystack but for developer purposes
     Object? metaData,
 
+    /// Plan name if is susbcription
+    String? plan,
+
     /// Payment Channels you want to make available to the user
     Object? paymentChannel,
   }) {
@@ -53,6 +56,7 @@ class PayWithPayStack {
                 secretKey: secretKey,
                 email: customerEmail,
                 reference: reference,
+                plan: plan,
                 currency: currency,
                 amount: amount,
                 paymentChannel: paymentChannel,
